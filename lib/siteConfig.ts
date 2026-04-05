@@ -48,6 +48,6 @@ export const siteConfig = {
    */
   lpUrls: {
     /** 防犯カメラ専用LP（確定後に差し替えてください） */
-    securityCamera: "https://yorihub.jp/security-camera/" as string,
+    securityCamera: "https://security.yorihub.jp" as string,
   },
 };
