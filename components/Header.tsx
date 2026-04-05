@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -24,10 +25,16 @@ export default function Header() {
           {/* Logo */}
           <Link
             href="/"
-            className="text-xl font-bold tracking-wide text-[#1e3a5f] hover:opacity-80 transition-opacity"
+            className="hover:opacity-80 transition-opacity"
             aria-label="ヨリハブ トップページへ"
           >
-            ヨリハブ
+            <Image
+              src="/logo.svg"
+              alt="ヨリハブ"
+              width={120}
+              height={33}
+              priority
+            />
           </Link>
 
           {/* Desktop Nav */}
