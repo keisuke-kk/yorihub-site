@@ -32,6 +32,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+# .env.production はシークレットなし（公開パス設定のみ）のため追跡する
+!.env.production
 
 # vercel
 .vercel

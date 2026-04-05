@@ -1,8 +1,9 @@
 import type { NextConfig } from "next";
 
-// GitHub Pages: BASE_PATH=/yorihub-site npm run build:gh
-// 独自ドメイン (yorihub.jp): BASE_PATH は不要（空のまま）
-const basePath = process.env.BASE_PATH ?? "";
+// 公開先パスは .env.production の NEXT_PUBLIC_BASE_PATH で管理する
+// GitHub Pages: NEXT_PUBLIC_BASE_PATH=/yorihub-site  (.env.production に記載済み)
+// 独自ドメイン yorihub.jp への移行時: .env.production を NEXT_PUBLIC_BASE_PATH= に変更するだけでよい
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 const nextConfig: NextConfig = {
   output: "export",

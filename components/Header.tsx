@@ -5,6 +5,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
+// next/image は images.unoptimized + output:export 環境で public/ ファイルに basePath を付与しないため明示する
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 const navLinks = [
   { href: "/", label: "トップ" },
   { href: "/about", label: "ヨリハブについて" },
@@ -29,7 +32,7 @@ export default function Header() {
             aria-label="ヨリハブ トップページへ"
           >
             <Image
-              src="/logo.svg"
+              src={`${BASE_PATH}/logo.svg`}
               alt="ヨリハブ"
               width={120}
               height={33}
